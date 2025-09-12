@@ -68,12 +68,31 @@ a{
 
 /* HERO-section */
 .deal-section{
-    /*background-image: url("https://picsum.photos/1200/500?grayscale");
+    background-image: url("https://picsum.photos/100/500?grayscale");
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: bottom;*/
+    background-position: bottom;
     background-color:var(--basic-grey); /* HVA: Setter lys bakgrunn for å fremheve seksjonen */
-    padding: 1rem;                     /* HVA: Gir luft rundt innholdet */
+    padding: 1rem;    /* HVA: Gir luft rundt innholdet */
+
+    /*
+    img{
+        top: 0;
+        left: 0;
+        width: 100%;
+    }
+
+    h2, p, a{
+        position: absolute;
+    }
+
+    p{
+        top: 63px;
+    }
+
+    a{
+        top: 160px;
+    }*/
 }
 
 
