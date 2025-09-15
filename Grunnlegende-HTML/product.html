@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Red dead redemption</title>
+    <link rel="stylesheet" type="text/css" href="../css/stylesheet.css">
     <style>
       body {
         font-family: Arial, Helvetica, sans-serif;
@@ -20,18 +21,32 @@
     </style>
 </head>
 <body>
- <header>
-      <a href="index.html">LOGO</a>
+  <header id="global-header">
+      <!-- <a> er en lenke (ankerelement).
+           href="index.html" peker til startsiden. Lenketeksten "LOGO" fungerer som midlertidig logo. -->
+      <a href="index.html" id="mainlogo">LOGO</a>
+
+      <!-- <nav> markerer en navigasjonsseksjon slik at hjelpemidler enkelt finner hovedmenyen. -->
       <nav>
+        <!-- <ul> (unordered list) representerer en punktliste med navigasjonsvalg. -->
         <ul>
-          <li><a href="index.html">Hjem</a></li>
-          <li><a href="products.html">Produkter</a></li>
+          <!-- <li> (list item) – hvert menyvalg er et listeelement. -->
+          <li>
+            <!-- Menypunkt som lenker til forsiden.
+                 href="index.html" => relativ lenke til samme mappe. -->
+            <a href="index.html">Hjem</a>
+          </li>
+
+          <!-- Menypunkt som lenker til produktsiden. -->
+          <li>
+            <a href="products.html">Produkter</a>
+          </li>
         </ul>
       </nav>
     </header>
     <main>
         <h1>Red dead redemption</h1>
-        <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1174180/header.jpg?t=1720558643" alt="Red dead redemption">
+        <img src="../img/Red.jpg" alt="Red dead redemption">
         <table>
           <tr>
             <th>Overskrift for kolonne 1</th>
@@ -59,5 +74,6 @@
           </tr>
         </table>
     </main>
+    <footer>Webutvikling 2025</footer>
 </body>
 </html>
