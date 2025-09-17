@@ -21,6 +21,12 @@ body{
     margin:0; /* HVA: Fjerner standard nettlesermargin for å få mer kontroll over layout */
 }
 
+#page-container{
+    display: grid;
+    /*grid-template-areas: "header" "hero" " main" "aside" " footer";*/
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto auto;
+}
 
 /* ========== GLOBAL HEADER ========== */
 #global-header{
@@ -28,6 +34,12 @@ body{
     justify-content: space-between;   /* HVA: Plasserer logo til venstre og navigasjon til høyre */
     align-items: center;              /* HVA: Vertikal sentrering av innholdet */
     padding: 1rem;                    /* HVA: Luft rundt headeren for bedre balanse */
+    /*grid-area: header;*/
+    grid-column-start: 1;
+    grid-column-end:2 ;
+
+    grid-row-start: 1;
+    grid-row-end: 2;
 
     nav{
         ul{
@@ -78,6 +90,13 @@ a{
     background-color:var(--basic-grey); /* HVA: Setter lys bakgrunn for å fremheve seksjonen */
     padding: 1rem;    /* HVA: Gir luft rundt innholdet */
     height: 50vh;
+    min-height: 200px;
+    
+    grid-column-start: 1;
+    grid-column-end: 2;
+
+    grid-row-start: 2;
+    grid-row-end: 3;
 
     
      /*img{
@@ -106,6 +125,12 @@ main{
     max-width: 1200px;
     width: 100%;
     margin: 0 auto;
+    
+    grid-column-start: 1;
+    grid-column-end: 2;
+
+    grid-row-start: 3;
+    grid-row-end: 4;
 
     section{
         h2{
@@ -161,6 +186,12 @@ article{
 .side-container{
     background-color: var(--basic-grey);
     padding: 1rem;
+    
+    grid-column-start: 1;
+    grid-column-end: 2;
+
+    grid-row-start: 4;
+    grid-row-end: 5;
 
     form{
 
@@ -183,4 +214,51 @@ footer{
     color: #fff;
     padding: 1rem;
     min-height: 150px;
+    
+    grid-column-start: 1;
+    grid-column-end: 2;
+
+    grid-row-start: 5;
+    grid-row-end: 6;
 }
+
+@media only screen and (min-width: 600px){
+      
+    #page-container{
+        grid-template-columns: 1fr 1fr 0.5fr;
+        grid-template-rows:repeat(4, auto)
+        /*grid-template-areas: "header header header"
+                            "hero hero hero"
+                            " main main aside"
+                            "footer footer footer";
+        /* grid-template-columns: 1fr 1fr 0.5fr; */
+    }
+
+    #global-header{
+        grid-column-end: 4;
+    }
+
+    .deal-section{
+        grid-column-end: 4;
+    }
+
+    main{
+        grid-column-end: 3;
+    }
+
+    .side-container{
+        grid-column-start: 3;
+        grid-column-end: 4;
+        grid-row-start: 3;
+        grid-row-end: 4;
+    }
+
+    footer{
+        grid-column-end: 4;
+        grid-row-start: 4;
+        grid-row-end: 5;
+    }
+
+    
+}
+
