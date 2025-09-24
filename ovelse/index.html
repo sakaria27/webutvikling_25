@@ -1,71 +1,80 @@
 <!DOCTYPE html>
-<html lang="nb">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ovelse</title>
-    <style>
-      form{
-        display: block;
-      }
-    </style>
+    <title>HTML5</title>
+    <link rel="stylesheet" href="css/stylesheet.css">
 </head>
 <body>
+   <img src="https://picsum.photos/id/237/200/300" alt="">
     <header>
-         <a href="index.html">LOGO</a>
-         <nav>
-            <li><a href="index.html">Hjem</a></li>
-            <li><a href="ovelse.html">Ovelse</a></li>
-            <li><a href="mal.html">Nettside Mal</a></li>
-            
-         </nav>
+        <a href="index.html" id="mainlogo">Logo</a>
+        <nav>
+            <ul>
+                <li><a href="index.html">Hjem</a></li>
+                <li><a href="mal.html">Nettside mal</a></li>
+                <li><a href="ovelse.html">Labøvelse</a></li>
+                <li><a href="#contact">Kontakt oss</a></li>
+            </ul>
+        </nav>
     </header>
     <main>
-        <section>
-          <article>
+        <article>
+            <h3>Labøvelse</h3>
+        </article>
+        <article>
             <h3>Kontakt oss</h3>
-          </article>
-        </section>
-        <section>
-          <article>
-            <h3>Studieplan</h3>
-          </article>
-        </section>
+        </article>
+        <article>
+            <h3>Mal</h3>
+        </article>
     </main>
     <aside>
         <section>
-            <article><a href="//www.w3schools.com/html/html5_semantic_elements.asp">Artikel 1</a></article>
-            <article><a href="//developer.mozilla.org/en-US/docs/Glossary/Semantics">Artikel 2</a></article>
-            <article><a href="//web.dev/learn/html/semantic-html">Artikel 3</a></article>
-            <article><a href="//www.semrush.com/blog/semantic-html5-guide/">Aritkel 4</a></article>
-            <article><a href="//www.geeksforgeeks.org/html/html5-semantics/">Artikel 5</a></article>
+            <h4>Semantisk HTML</h4>
+            <ul>
+                <li><a href="https://web.dev/learn/html/semantic-html">web.dev - Semantic HTML</a></li>
+                <li><a href="https://www.w3schools.com/html/html5_semantic_elements.asp">W3 schools - HTML Semantic Elements</a></li>
+                <li><a href="https://www.semrush.com/blog/semantic-html5-guide/">Semrush - What Is Semantic HTML?</a></li>
+                <li><a href="https://www.codecademy.com/resources/blog/semantic-html">Codecademy - What is Semantic HTML & Why Is It Important for Accessibility?</a></li>
+                <li><a href="https://www.geeksforgeeks.org/html/html5-semantics/">Geeks for Geeks - HTML5 Semantics</a></li>
+            </ul>
+        </section>
+        <section>
+            <h4>Oversikt over SERP søk fra Google om semantisk HTML</h4>
+            <a class="google-btn" href="https://www.google.com/search?q=semantic+html&client=firefox-b-d&sca_esv=5b71cfa89013eb9f&ei=c8THaK6qKf_T9u8P55angQ8&oq=sematic+html&gs_lp=Egxnd3Mtd2l6LXNlcnAiDHNlbWF0aWMgaHRtbCoCCAAyBxAAGIAEGAoyBxAAGIAEGAoyBxAAGIAEGAoyBxAAGIAEGAoyBxAAGIAEGAoyBhAAGBYYHjIFEAAY7wUyBRAAGO8FMggQABiABBiiBEinPlDZCFjwOHAMeAGQAQCYAWSgAasKqgEEMTUuMbgBA8gBAPgBAZgCHKACzguoAgrCAgoQABiwAxjWBBhHwgINEAAYgAQYsAMYQxiKBcICDhAAGLADGOQCGNYE2AEBwgIZEC4YgAQYsAMY0QMYQxjHARjIAxiKBdgBAcICFhAuGIAEGLADGEMY1AIYyAMYigXYAQHCAggQABiABBixA8ICERAuGIAEGLEDGNEDGIMBGMcBwgILEAAYgAQYsQMYgwHCAg4QLhiABBixAxiDARiKBcICBRAuGIAEwgIOEAAYgAQYsQMYgwEYigXCAgsQLhiABBixAxiDAcICDhAuGIAEGLEDGNEDGMcBwgILEC4YgAQYxwEYrwHCAgUQABiABMICCBAuGIAEGNQCwgILEC4YgAQY0QMYxwHCAhMQABiABBhDGLQCGIoFGOoC2AECwgIZEC4YgAQY0QMYQxi0AhjHARiKBRjqAtgBAsICChAAGIAEGEMYigXCAhAQLhiABBjRAxhDGMcBGIoFwgIEEAAYA8ICDRAuGIAEGLEDGEMYigXCAggQLhiABBixA8ICHxAuGIAEGNEDGEMYxwEYigUYlwUY3AQY3gQY4ATYAQHCAhQQLhiABBiXBRjcBBjeBBjfBNgBAcICBxAuGIAEGArCAggQABgWGAoYHpgDBvEFwsYY0V0jJ6-IBgGQBhK6BgYIARABGAm6BgQIAhgHkgcEMjcuMaAHiqkBsgcEMTUuMbgHjwvCBwgwLjEuMjUuMsgHhgE&sclient=gws-wiz-serp">HTML SERP</a>
         </section>
     </aside>
     <footer>
-      <p>Sakaria Mohamed</p>
-      <p>Sakarihm@hiof.no</p>
-      <p>Kontakt skjema</p>
-      <form>  
-       <label>E-post:</label>
-        <label>
-          <input type=""email" placeholder="skriv epost her">
-        </label>
-        <label>Navn</label>
-        <label>
-        <input type="text" placeholder="Skriv navn">
-       </label>
-       <label>Emne</label>
-       <label>
-        <input type="text" placeholder="Skriv Emne"> 
-       </label>
-       <label>Melding</label>
-       <label>
-        <textarea type="msg" placeholder="skriv meldin her"></textarea>
-       </label>
-       <label>
-         <input type="submit" value="Mel meg på" >
-       </label>
-      </form>
+        <ul>
+            <li>
+                Nora Nordmann
+            </li>
+            <li>
+                nora.nordman@hiof.no
+            </li>
+        </ul>
+        <form id="contact">
+            <label>
+                Navn:
+                <input type="text" placeholder="nora..." required>
+            </label>
+            <label>
+                E-post:
+                <input type="email" placeholder="nora.nordman@hiof.no" required>
+            </label>
+            <label>
+                Emne:
+                <input type="text" placeholder="Spm om HTML?">
+            </label>
+            <label>
+                Melding:
+                <textarea>
+
+                </textarea>
+            </label>
+        </form>
     </footer>
 </body>
 </html>

@@ -1,112 +1,83 @@
 :root{
-    /* 
-      Globale CSS-variabler for enkel gjenbruk av farger.
-      HVORFOR: Gir konsistent fargepalett og enklere vedlikehold.
-    */
-    --basic-grey: #efefefef;   /* Lys grå, brukes til bakgrunn og subtile elementer */
-    --basic-red: #6a0404;      /* Mørk rød, kan brukes for viktige knapper/markeringer */
+    --basic-grey: #efefef;
+    --basic-red: #6a0404;
 }
 
 *{
     box-sizing: border-box;
 }
 
-/* 
-  GLOBALT: Setter en lesbar standardfont for hele dokumentet.
-  HVORFOR: Sans-serif (Arial/Helvetica) gir god skjermlesbarhet og
-  skaper et ensartet uttrykk på tvers av sider.
-*/
+
+
 body{
     font-family: Arial, Helvetica, sans-serif;
-    margin:0; /* HVA: Fjerner standard nettlesermargin for å få mer kontroll over layout */
+    margin:0;
 }
 
 #page-container{
-    display: grid;
-    /*grid-template-areas: "header" "hero" " main" "aside" " footer";*/
-    grid-template-columns: 1fr;
+    display:grid;
+    /*grid-template-areas: "header" "hero" "main" "aside" "footer";*/
+    grid-template-columns:1fr;
     grid-template-rows: auto auto auto auto auto;
 }
 
-/* ========== GLOBAL HEADER ========== */
 #global-header{
-    display: flex;                    /* HVA: Bruker flexbox for fleksibel layout */
-    justify-content: space-between;   /* HVA: Plasserer logo til venstre og navigasjon til høyre */
-    align-items: center;              /* HVA: Vertikal sentrering av innholdet */
-    padding: 1rem;                    /* HVA: Luft rundt headeren for bedre balanse */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
     /*grid-area: header;*/
     grid-column-start: 1;
-    grid-column-end:2 ;
-
+    grid-column-end: 2;
     grid-row-start: 1;
     grid-row-end: 2;
-
     nav{
         ul{
-            padding:0;                /* HVA: Fjerner standard padding for renere design */
-            margin:0;                 /* HVA: Fjerner standard marger */
-
+            padding: 0;
+            margin: 0;
             li{
-                list-style: none;     /* HVA: Skjuler standard punkter i navigasjonslisten */
-                display: inline-block;/* HVA: Viser menyvalg horisontalt i stedet for vertikalt */
+                list-style: none;
+                display: inline-block;
             }
         }
     }
 }
 
-
-/*
-  #mainlogo: Stil for hovedlogoen/merkenavnet som lenke.
-  HVORFOR: Større og tyngre typografi gjør logoen tydelig; 
-  fjerner understrek for et renere header-uttrykk; 
-  fargevalg i grått (#4d4a4a) gir mykere kontrast enn helt svart.
-*/
 #mainlogo{
-    font-size: 30px;            /* HVA: Stor skrift for visuell hierarki. */
-    font-weight: 900;           /* HVA: Ekstra fet for å signalisere merke/primærsmerke. */
-    font-family: Arial, Helvetica, sans-serif; /* HVA: Sikrer samme font som globalt, og fallback. */
-    text-decoration: none;      /* HVA: Fjerner understrek siden dette fungerer som logo. */
-    color: #4d4a4a;             /* HVA: Dempet grå for mindre hard kontrast enn #000. */
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 900;
+    color: #4d4a4a;
+    text-decoration: none;
 }
 
-
-/*
-  a: Standardstil for lenker.
-  HVORFOR: Fjerner understrek og setter nøytral farge; 
-  dette gir et minimalistisk uttrykk. (Vurder :hover/:focus for tydelig interaksjon.)
-*/
 a{
-    color: #000;                /* HVA: Nøytral svart som standard lenkefarge. */
-    text-decoration: none;      /* HVA: Fjerner understrek for renere typografi. */
+    color: #000;
+    text-decoration: none;
 }
 
-
-/* HERO-section */
 .deal-section{
-    background-image: url("https://picsum.photos/100/500?grayscale");
+    background-image: url("../image/Balatro.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: bottom;
-    background-color:var(--basic-grey); /* HVA: Setter lys bakgrunn for å fremheve seksjonen */
-    padding: 1rem;    /* HVA: Gir luft rundt innholdet */
+    background-color: var(--basic-grey);
+    padding: 1rem;
+    position: relative;
     height: 50vh;
     min-height: 200px;
-    
     grid-column-start: 1;
     grid-column-end: 2;
+    grid-row-start:2;
+    grid-row-end:3;
+    /*grid-area: hero;*/
 
-    grid-row-start: 2;
-    grid-row-end: 3;
-
-    
-     /*img{
-        top: 0;
-        left: 0;
+   /* img{
         width: 100%;
     }
 
     h2, p, a{
-        position: absolute;
+       position: absolute; 
     }
 
     p{
@@ -114,85 +85,75 @@ a{
     }
 
     a{
-        top: 160px;
+        top: 299px;
     }*/
 }
-
-
-/* ========== HOVEDINNHOLD ========== */
 
 main{
     max-width: 1200px;
     width: 100%;
     margin: 0 auto;
-    
+    /*grid-area: main;*/
     grid-column-start: 1;
     grid-column-end: 2;
-
-    grid-row-start: 3;
-    grid-row-end: 4;
+    grid-row-start:3;
+    grid-row-end:4;
 
     section{
         h2{
             text-align: center;
         }
         article{
-            margin: 0 auto;
+            margin: 1rem auto;
         }
     }
 }
 
-
-
-/*
-  article: Kort/innholdsboks-oppsett.
-  HVORFOR: Marg og padding gir luft; subtil kantlinje definerer kort;
-  breddebegrensninger forbedrer lesbarhet og responsivitet.
-*/
 article{
-    margin: 1rem 0;             /* HVA: Vertikal luft mellom artikler. */
-    border: 1px solid #efefef;  /* HVA: Lys kant for visuell avgrensing uten å dominere. */
-    max-width: 400px;           /* HVA: Hindrer for brede linjer – bedre lesbarhet. */
-    width: 100%;                /* HVA: Lar boksen fylle tilgjengelig plass i små visninger. */
-    min-width: 250px;           /* HVA: Sikrer at kortet ikke blir for smalt. */
-    padding: 1rem;              /* HVA: Innvendig luft for behagelig innholdsmarg. */
+    margin: 1rem 0;
+    border: 1px solid #efefef;
+    max-width: 400px;
+    width: 31%;
+    min-width: 250px;
+    padding: 1rem;
+    flex-grow: 1
+    ;
 
-    /*
-      img (nestet): Gjør bilder responsive inne i article.
-      HVORFOR: Full bredde sikrer at bilder skalerer med boksen og ikke flyter utenfor.
-      
-      OBS: Dette er CSS-nesting. For maksimal kompatibilitet i ren CSS,
-      skriv regelen som `article img { width: 100%; }`.
-    */
     img{
-        width: 100%;            /* HVA: Skalerer bilde til kortets bredde. */
+        width: 100%;
     }
 }
 
+.category-card{
+    width: 33%;
+    flex-grow: 1;
+}
 
-/*
-  .btn: Primær knapp/lenke med knappestil.
-  HVORFOR: Kontraststerk bakgrunn for tydelig call-to-action; 
-  inline-block lar oss bruke padding og holde elementet på tekstlinje hvis ønsket.
-*/
+.grow1{
+    flex-grow: 1;
+}
+
+.grow2{
+    flex-grow: 2;
+}
+
 .btn{
-    display: inline-block;      /* HVA: Tillater padding/bredde, men flyter i tekst. */
-    background-color: #000;     /* HVA: Mørk bakgrunn gir klar kontrast mot hvit tekst. */
-    color: #fff;                /* HVA: Høy kontrast for tilgjengelighet/lesbarhet. */
-    padding: 1rem;              /* HVA: Stor klikkflate og balansert spacing */
-    border: none;               /* HVA: Fjerner standardkant for renere uttrykk */
+    display: inline-block;
+    background-color: #000;
+    color: #fff;
+    padding: 1rem;
+    border: none;
 }
 
 .side-container{
     background-color: var(--basic-grey);
     padding: 1rem;
-    
+    /*grid-area: aside;*/
     grid-column-start: 1;
     grid-column-end: 2;
-
-    grid-row-start: 4;
-    grid-row-end: 5;
-
+    grid-row-start:4;
+    grid-row-end:5;
+    
     form{
 
         input{
@@ -214,51 +175,84 @@ footer{
     color: #fff;
     padding: 1rem;
     min-height: 150px;
-    
+    /*grid-area: footer;*/
     grid-column-start: 1;
     grid-column-end: 2;
-
-    grid-row-start: 5;
-    grid-row-end: 6;
+    grid-row-start:5;
+    grid-row-end:6;
 }
 
 @media only screen and (min-width: 600px){
-      
     #page-container{
         grid-template-columns: 1fr 1fr 0.5fr;
-        grid-template-rows:repeat(4, auto)
-        /*grid-template-areas: "header header header"
-                            "hero hero hero"
-                            " main main aside"
-                            "footer footer footer";
-        /* grid-template-columns: 1fr 1fr 0.5fr; */
+        /*grid-template-rows: repeat(4:auto);*/
+       /* grid-template-areas: "header header header"
+                             "hero hero hero "
+                             "main main aside"
+                             "footer footer footer";
+        grid-template-columns: 1fr 1fr 1fr;*/   
     }
 
     #global-header{
-        grid-column-end: 4;
+        grid-column-end:4;
     }
 
     .deal-section{
-        grid-column-end: 4;
+        grid-column-end:4;
     }
-
     main{
-        grid-column-end: 3;
+        grid-column-end:3;
     }
 
     .side-container{
-        grid-column-start: 3;
-        grid-column-end: 4;
-        grid-row-start: 3;
-        grid-row-end: 4;
+        grid-column-start:3;
+        grid-column-end:4;
+        grid-row-start:3;
+        grid-row-end:4;
     }
-
-    footer{
-        grid-column-end: 4;
-        grid-row-start: 4;
-        grid-row-end: 5;
-    }
-
     
+    footer{
+        grid-column-end:4;
+        grid-row-start:4;
+        grid-row-end:5;
+    }
 }
+
+.flex-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: center;
+
+    h2{
+        width: 100%;
+    }
+
+    article{
+        min-width: 200px !important;
+        margin: 0;
+        /*flex-grow: 1;*/
+    }
+
+}
+
+
+section.flex-grow{
+    justify-content:flex-start;
+
+   /* article{
+        max-width: 900px;
+        min-width: 100px;
+        flex-grow: 1;
+        width: 31%;
+    }
+}
+
+.grow-1{
+    flex-grow: 1;
+}
+
+.grow-2{
+    flex-grow: 2;
+}}*/
 
