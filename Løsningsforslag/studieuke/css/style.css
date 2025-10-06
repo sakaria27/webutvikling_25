@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Zalando+Sans:ital,wght@0,200..900;1,200..900&display=swap');
+ 
+body{
+    font-family: "Zalando Sans", sans-serif;;
+}
+
+.hidden{
+    display: none;
+}
+
+@media only screen and (max-width:600px){
+
+    /* Menyen vises som "overlay" øverst på hele skjermen /
+    #menu {
+        background-color: antiquewhite; / Egen bakgrunn /
+        position: absolute;             / Plasseres over annet innhold /
+        width: 100%;                    / Full bredde /
+        top: 0;                         / Starter helt øverst /
+        left: 0;                        / Starter helt til venstre /
+        padding: 2rem;                  / Luft rundt innholdet /
+      }
+
+}
+
+@media only screen and (min-width:600px){
+
+
+    / Header får flex for å plassere innholdet på hver side /
+    header{
+        display: flex;
+        justify-content: space-between; / Plasserer elementene venstre/høyre /
+    }
+
+    / Når skjermen er bred nok, skal .hidden-elementer vises igjen /
+    .hidden{
+        display: inline-block;
+    }
+
+    / Menyen tilpasset desktop: liste horisontalt /
+    #menu{
+        ul{
+            display: flex; / Viser menyvalg på linje /
+            gap: 1rem;     / Avstand mellom menyvalg /
+        }
+    }
+
+    / Hamburger-knappen skjules på større skjermer */
+    #ham{
+        display: none;
+    }
+
+    #close{
+        display: none;
+    }
+
+}
