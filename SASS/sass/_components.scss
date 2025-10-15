@@ -1,0 +1,9 @@
+@use 'colors';
+
+.card{
+    border: 1px solid $lightGrey;
+    padding: 1rem;
+    flex: 1 1 calc(33% - 20px);
+    min-width: 250px;
+    border-radius: 5px;
+}
